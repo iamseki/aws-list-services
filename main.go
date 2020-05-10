@@ -7,12 +7,12 @@ import (
 	"os"
 	"sync"
 
-	"github.com/aws/aws-sdk-go/service/elasticache"
-
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
 	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/elasticache"
 	"github.com/aws/aws-sdk-go/service/rds"
+	_ "github.com/joho/godotenv/autoload"
 )
 
 var role = os.Getenv("role")
@@ -118,11 +118,6 @@ func listElasticReplicas(sess *session.Session, c chan []*elasticache.Replicatio
 
 // Init env vars & file log
 func Init() {
-	os.Setenv("role_prod", "arn:aws:iam::554786642939:role/Geru-Prod-ViewOnly-CrossAccountRoleReadOnlyAccess-1UE5P9KL19DCU")
-	os.Setenv("role_stage", "arn:aws:iam::136478230157:role/Geru-Stage-ViewOnly-CrossAccountRoleReadOnlyAccess-BN5KI2I0TW01")
-	os.Setenv("role_old", "arn:aws:iam::232667596449:role/Geru-OldAccount-Admin-CrossAccountRoleFullAdmin")
-	os.Setenv("role_auth", "arn:aws:iam::109267741677:role/Geru-Auth-ViewOnly-CrossAccountRoleReadOnlyAccess-624GBAIN1I0R")
-
 	os.Remove("instances.log")
 }
 
