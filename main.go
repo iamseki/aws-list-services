@@ -116,16 +116,14 @@ func listElasticReplicas(sess *session.Session, c chan []*elasticache.Replicatio
 	}
 }
 
-// Init env vars & file log
-func Init() {
+// init env vars & file log
+func init() {
 	os.Remove("instances.log")
 }
 
 // main is the entry point to our program
 func main() {
 	var wg sync.WaitGroup
-
-	Init()
 
 	sess := session.Must(session.NewSession(&aws.Config{
 		Region: aws.String("us-east-1"),
