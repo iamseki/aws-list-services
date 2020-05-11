@@ -28,3 +28,28 @@ other functions.</p>
 -  region can be any *aws* region options such as: `sa-east-1` , `us-east-1` and so on.
 -  role must be `prod` , `stage` or `old`
 ---
+## What you will need :hammer: :
+
+> create a **.env** file and set the role arn as env vars,to switch roles properly:
+  ```  
+    role_prod=arn:aws:iam::123456:role/ProdblablaViewOnllyFULL-sadlp43
+    role_stage=arn:aws:iam::14324324:role/StageblablaViewOnlyFULL-34234
+    role_old=arn:aws:iam::21231:role/OldblablaFullAccess-214324
+    role_auth=arn:aws:iam::109267741677:role/AuthblablaFullViewacase24
+  ```
+**Output Interface** :scroll: :
+  ```
+      [count] RDS Instances: 
+      {
+          "Name": "instanceName",
+          "Endpoint": {
+              "Address": "address",
+              "Port": 5432
+          },
+          "Engine": "postgres:11.5"
+      }, ...
+      [count] Elastic Instances: same format, ...
+         
+  ```
+    - Above is what expected in output terminal and instances.log file.
+  - May not in the same order cause go routine can terminate in diferent times.
