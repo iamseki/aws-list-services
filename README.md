@@ -23,7 +23,7 @@ other functions.</p>
 
 > execute `go build main.go` 
 
-*then* `region=us-east-1 role=prod ./main` 
+*then* **`region=us-east-1 role=prod ./main`** 
 
 -  region can be any *aws* region options such as: `sa-east-1` , `us-east-1` and so on.
 -  role must be `prod` , `stage` or `old`
