@@ -28,7 +28,7 @@ other functions.</p>
 -  region can be any *aws* region options such as: `sa-east-1` , `us-east-1` and so on.
 -  role must be `prod` , `stage` or `old`
 ---
-## What you will need :hammer: :
+## What you will need :hammer: 
 
 > create a **.env** file and set the role arn as env vars,to switch roles properly:
   ```  
@@ -37,7 +37,7 @@ other functions.</p>
     role_old=arn:aws:iam::21231:role/OldblablaFullAccess-214324
     role_auth=arn:aws:iam::109267741677:role/AuthblablaFullViewacase24
   ```
-**Output Interface** :scroll: :
+**Output Interface** :scroll: 
   ```
       [count] RDS Instances: 
       {
