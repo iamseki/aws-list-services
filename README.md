@@ -31,14 +31,14 @@ other functions.</p>
 ## What you will need :hammer: 
 
 > create a **.env** file and set the role arn as env vars,to switch roles properly:
-  ```  
-    role_prod=arn:aws:iam::123456:role/ProdblablaViewOnllyFULL-sadlp43
-    role_stage=arn:aws:iam::14324324:role/StageblablaViewOnlyFULL-34234
-    role_old=arn:aws:iam::21231:role/OldblablaFullAccess-214324
-    role_auth=arn:aws:iam::109267741677:role/AuthblablaFullViewacase24
+  ```yaml  
+       role_prod=arn:aws:iam::123456:role/ProdblablaViewOnllyFULL-sadlp43
+       role_stage=arn:aws:iam::14324324:role/StageblablaViewOnlyFULL-34234
+       role_old=arn:aws:iam::21231:role/OldblablaFullAccess-214324
+       role_auth=arn:aws:iam::109267741677:role/AuthblablaFullViewacase24
   ```
 **Output Interface** :scroll: 
-  ```
+  ```shell
       [count] RDS Instances: 
       {
           "Name": "instanceName",
