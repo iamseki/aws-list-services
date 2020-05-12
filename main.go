@@ -15,9 +15,6 @@ import (
 	_ "github.com/joho/godotenv/autoload"
 )
 
-var role = os.Getenv("role")
-var region = os.Getenv("region")
-
 // Instance for json structure
 type Instance struct {
 	Name     string
@@ -27,6 +24,9 @@ type Instance struct {
 
 // updateCredentials to receive specific aws service data
 func updateCredentials(sess *session.Session) *aws.Config {
+	var region = os.Getenv("region")
+	var role = os.Getenv("role")
+
 	assumeRole := os.Getenv("role_" + role)
 
 	creds := stscreds.NewCredentials(sess, assumeRole)
@@ -118,7 +118,7 @@ func listElasticReplicas(sess *session.Session, c chan []*elasticache.Replicatio
 
 // init env vars & file log
 func init() {
-	os.Remove("instances.log")
+	go os.Remove("instances.log")
 }
 
 // main is the entry point to our program
