@@ -39,7 +39,7 @@ other functions.</p>
   ```
 **Output Interface** :scroll: 
   ```shell
-      [count] RDS Instances: 
+      [count] x Instances: 
       {
           "Name": "instanceName",
           "Endpoint": {
@@ -48,8 +48,7 @@ other functions.</p>
           },
           "Engine": "postgres:11.5"
       }, ...
-      [count] Elastic Instances: same format, ...
          
   ```
-    - Above is what expected in output terminal and instances.log file.
-  - May not in the same order cause go routine can terminate in diferent times.
+    - Above is what expected in output terminal and instances.log file for each service listed.
+  - May not print in the same order cause go routine can terminate in diferent times.
