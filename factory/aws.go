@@ -86,7 +86,7 @@ func (e elastiService) List(wg *sync.WaitGroup) {
 	esi = append([]string{capac}, esi...)
 
 	wg.Add(1)
-	go writeLog("elastinstances.log", esi, wg)
+	go writeLog("elastInstances.log", esi, wg)
 
 	for _, i := range esi {
 		fmt.Println(i)
