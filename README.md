@@ -30,6 +30,8 @@ other functions.</p>
 ---
 ## What you will need :hammer: 
 
+Assuming that you already have your AWS credentials in /.aws file.
+
 > create a **.env** file and set the role arn as env vars,to switch roles properly:
   ```yaml  
        role_prod=arn:aws:iam::123456:role/ProdblablaViewOnllyFULL-sadlp43
